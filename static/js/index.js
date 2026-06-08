@@ -22,22 +22,17 @@ $(document).ready(function() {
   var ctx = document.getElementById('ablationChart');
   if (ctx) {
     new Chart(ctx, {
-      type: 'line',
+      type: 'bar',
       data: {
-        labels: ['HiCrew (Full)', 'w/o Planning Layer', 'w/o Q-Aware\nCaptioning', 'w/o Hybrid Tree'],
+        labels: ['HiCrew\n(Full)', 'w/o Planning\nLayer', 'w/o Q-Aware\nCaptioning', 'w/o Hybrid\nTree'],
         datasets: [{
           label: 'Accuracy (%)',
           data: [71.6, 62.0, 59.2, 58.7],
-          borderColor: '#4F46E5',
-          backgroundColor: 'rgba(79, 70, 229, 0.1)',
-          borderWidth: 3,
-          pointBackgroundColor: ['#4F46E5', '#10B981', '#0EA5E9', '#EF4444'],
-          pointBorderColor: '#fff',
-          pointBorderWidth: 2,
-          pointRadius: 7,
-          pointHoverRadius: 9,
-          fill: true,
-          tension: 0.15
+          backgroundColor: ['#4F46E5', '#10B981', '#0EA5E9', '#EF4444'],
+          borderColor: ['#3730a3', '#059669', '#0284c7', '#dc2626'],
+          borderWidth: 2,
+          borderRadius: 6,
+          barPercentage: 0.65
         }]
       },
       options: {
